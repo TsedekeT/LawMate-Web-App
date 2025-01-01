@@ -1,0 +1,602 @@
+/* header section*/
+body {
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+ header {
+            background-color:#4b362d;  
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+ header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: auto;
+            padding: 0 20px;
+        }
+
+header .logo img {
+            max-height: 50px;  
+        }
+
+header nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 80px; 
+        }
+
+ header nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+header nav ul li a:hover {
+            color: #918171;  
+            font-size: 20px; 
+            transition: 0.2s; 
+             
+        }
+
+ /*hero section css the one that has an image as a backdrop*/
+.hero {
+            position: relative;
+            height: 100vh;
+            background: url('../img/home_background.jpg') no-repeat center center/cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+        }
+
+.hero h1 {
+            font-size: 56px;
+            margin: 0 0 15px;
+        }
+
+.hero p {
+            font-size: 20px;
+            margin: 0 0 30px;
+            max-width: 800px;
+        }
+
+.choices {
+            margin-top: 20px;
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+
+.choice-btn {
+            padding: 15px 30px;
+            background-color: #6d5f5e;  
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease, transform 0.3s;
+        }
+
+ .choice-btn:hover {
+            background-color: #786867e4;
+            transform: scale(1.1);  
+        }
+
+ /*Services section*/
+
+ #services {
+            background-color: #ffffff;
+            padding: 40px 20px;
+            text-align: center;
+        }
+        
+.services-container {
+            max-width: 1200px;
+            margin: 20px auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 40px 20px;
+        }
+        
+.services-container h2 {
+            font-size: 36px;
+            color: #6a4c3c;
+            margin-bottom: 20px;
+        }
+        
+.services-container p {
+            font-size: 18px;
+            color: #555;
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+        
+ .services-cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        
+ .service-card {
+            flex: 1 1 calc(33% - 20px);
+            min-width: 250px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+ .service-card h3 {
+            font-size: 24px;
+            color: #6a4c3c;
+        }
+        
+.service-card p {
+            font-size: 16px;
+            color: #555;
+        }
+        
+/* About Section */
+.about {
+    background-color: #f9f9f9;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.about .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;  
+}
+
+/* Title and Subtitle Styles */
+.about h2,
+.about h3 {
+    color: #6a4c3c;    
+    margin-bottom: 20px;
+}
+
+.about h2 {
+    font-size: 2.5em;
+    font-weight: bold;
+}
+
+.about h3 {
+    font-size: 1.8em;
+}
+
+ 
+.about p {
+    font-size: 1.1em;
+    color: #555;
+    line-height: 1.8;
+    margin: 10px 0;
+}
+
+/* Core Values Section */
+.about ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);  
+    gap: 30px;
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+.about ul li {
+    font-size: 1.2em;
+    color: #555;
+    line-height: 1.6;
+    text-align: center;
+    position: relative;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+ 
+/* Section Titles */
+.section-title {
+    font-size: 30px;
+    color: #6a4c3c;
+    margin-top: 40px;
+    text-decoration: underline;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    .about h2 {
+        font-size: 2em;
+    }
+
+    .about h3 {
+        font-size: 1.5em;
+    }
+
+    .about p,
+    .about ul li {
+        font-size: 1em;
+    }
+
+    .about ul {
+        grid-template-columns: 1fr;   
+        padding: 0 10px;
+    }
+
+    .about ul li {
+        margin-bottom: 20px;
+    }
+
+    .about .container {
+        gap: 50px;  
+    }
+}
+
+/* Additional Styling for Sections with Text & Icons */
+.about .About_choice_value,
+.about .About_text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px; 
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.about .About_text p,
+.about .About_choice_value ul {
+    max-width: 800px;
+}
+
+.about .About_text h3,
+.about .About_choice_value h3 {
+    font-size: 1.8em;
+    color: #6a4c3c;   
+    margin-bottom: 20px;
+}
+
+.about .About_text p,
+.about .About_choice_value p {
+    font-size: 1.1em;
+    color: #555;
+    line-height: 1.8;
+    text-align: center;
+}
+
+
+ /*signup page and login pages*/
+ .container {
+    display: flex;
+    justify-content: center;
+    margin: 50px auto;
+    max-width: 1200px;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.left-side {
+flex: 1;
+background-size: cover;
+border-radius: 8px;
+height: 100%;
+display: flex;
+justify-content: center;  
+align-items: center; 
+}
+
+.left-side img {
+max-width: 100%;  
+height: 1000px;  
+border-radius: 8px;
+}
+.right-side {
+    flex: 1;
+    padding: 30px;
+    max-width: 600px;
+    margin-left: 20px;
+}
+
+.input-field {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #6a4c3c;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #786867;
+}
+
+.third-party-login {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.third-party-login button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 32%;  
+    transition: transform 0.3s;
+}
+
+.third-party-login button:hover {
+    transform: scale(1.05);
+}
+
+.icon-btn {
+    background-color: #f2ebe8;
+}
+
+ 
+
+.third-party-login button img {
+    margin-right: 10px;
+    width: 20px;
+}
+
+.redirect-link {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.redirect-link a {
+    color: #6a4c3c;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.redirect-link a:hover {
+    text-decoration: underline;
+}
+
+.error {
+    color: red;
+    font-size: 14px;
+}
+
+.file-upload {
+    margin-top: 15px;
+}
+#authenticateLawyer {
+margin-bottom: 20px;  
+}
+/*image for login*/
+.left-sidel {
+    flex: 1;
+    background-size: cover;
+    border-radius: 8px;
+    height: 100%;
+    display: flex;
+    justify-content: center;  
+    align-items: center;  
+    }
+    
+    .left-sidel img {
+    max-width: 100%;  
+    height: 500px;  
+    border-radius: 8px;
+    }
+
+/*footer*/
+
+footer {
+            background-color: #4b362d;  
+            color: white;
+            text-align: center;
+            padding: 10px 0;  
+            margin-top: 20px;
+            border-radius: 5px;
+            width: 100%;  
+        }
+
+footer p {
+            margin: 0;
+            font-size: 14px;
+        }
+/* General Mobile Responsiveness */
+@media (max-width: 600px) {
+    body {
+        font-size: 12px;
+
+    }
+    .services-cards p {
+        font-size: 12px;
+    }
+    
+
+    header .container {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    header nav ul {
+        flex-direction: row;  
+        gap: 10px; 
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    header nav ul li a {
+        font-size: 14px;  
+        padding: 5px 10px;  
+    }
+
+    .hero h1 {
+        font-size: 36px;  
+    }
+
+    .hero p {
+        font-size: 14px;  
+        padding: 0 10px;
+    }
+
+    .choices {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .choice-btn {
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+
+    .services-cards {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .service-card {
+        flex: 1 1 100%;
+        padding: 15px;
+    }
+
+    .service-card p {
+        font-size: 14px;  
+    }
+
+    .about ul {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .about ul li {
+        padding: 10px;
+        font-size: 14px;  
+    }
+
+    .about p {
+        font-size: 14px;  
+    }
+
+    .container {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .left-side img,
+    .left-sidel img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .right-side {
+        margin-left: 0;
+        padding: 15px;
+    }
+
+    .input-field,
+    .btn {
+        font-size: 12px;
+    }
+
+    .third-party-login button {
+        font-size: 12px;
+        padding: 8px;
+    }
+
+    footer {
+        font-size: 10px;
+    }
+}
+
+/* Small Mobile Screens */
+@media (max-width: 480px) {
+    header .logo img {
+        max-height: 35px;
+    }
+
+    header nav ul li a {
+        font-size: 12px;
+        padding: 5px 8px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 12px; 
+    }
+
+    .choice-btn {
+        padding: 8px 12px;
+        font-size: 12px;
+    }
+
+    .service-card h3 {
+        font-size: 18px;
+    }
+
+    .service-card p {
+        font-size: 12px;  
+    }
+
+    .about h2,
+    .about h3 {
+        font-size: 1.3em;
+    }
+
+    .about ul li {
+        font-size: 0.9em;
+        padding: 10px;
+    }
+
+    .about p {
+        font-size: 12px;  
+    }
+
+    .container {
+        padding: 10px;
+    }
+
+    footer {
+        font-size: 10px;
+    }
+}
