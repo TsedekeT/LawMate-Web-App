@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client Dashboard</title>
+    <link rel="stylesheet" href="css/User.css">
+    
+     
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Client Dashboard</h1>
+    </header>
+
+    <!-- Sidebar Section with Functionalities -->
+    <div class="sidebar">
+        <div class="logo">
+            <img src="img/photo_2024-12-27_15-10-59.jpg " style="border-radius: 50%; width: 150px; height: 150px;" alt=" Logo Here">
+        </div>
+        <a href="#profile">Profile</a>
+        <a href="#video-consultation">Video Consultation</a>
+        <a href="#booking">Booking</a>
+        <a href="#payment-verification">Payment Verification</a>
+        <a href="#communication">Communication</a>
+        <a href="#resource-hub">Resource Hub</a>
+        <a href="#search-lawyer">Matchmaking</a>
+        <a href="#edit-profile-section">Update Profile</a>
+        <a href="#review-lawyer">Review Lawyer</a>
+        <a href="logout.html">Logout</a>
+    </div>
+
+    <!-- Main Content Section -->
+    <div class="main-content">
+        <!-- Profile Section -->
+        <div id="profile" class="section">
+            <h3>Profile</h3>
+          <div> 
+            <p>Name: Emily parker</p>
+            <p>Email: Emilyparker@gmail.com</p>
+            <p>Phone: 123-456-7890</p>
+           </div>
+           <div> 
+            <img src="img/woman-6771278_1280.jpg" alt="Profile Picture" style="width: 200px; height:200px; border-radius: 50%;">
+           </div>
+        </div>
+
+        <!-- Edit Profile Form -->
+        <div id="edit-profile-section" class="section">
+            <h3>Edit Profile</h3>
+            <form class="edit-profile-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" value="John Doe">
+        
+                <label for="email">Email:</label>
+                <input type="email" id="email" value="johndoe@example.com">
+        
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" value="123-456-7890">
+        
+                <label for="profile-pic">Profile Picture:</label>
+                <input type="file" id="profile-pic" accept="image/*">
+        
+                <!-- Notification Preferences -->
+                <div class="notification-preferences">
+                    <label for="notification-mode">Notification Mode:</label>
+                    <select id="notification-mode" name="notification-mode" class="input-field">
+                        <option value="sound">Sound</option>
+                        <option value="vibrate">Vibrate</option>
+                        <option value="mute">Mute</option>
+                    </select>
+                </div>
+        
+                <button type="submit">Save Changes</button>
+            </form>
+        </div>
+        
+
+       <!-- Resource Hub Section -->
+<div id="resource-hub" class="section">
+    <h3>Legal Resource Hub</h3>
+    
+    <!-- Frequently Asked Questions -->
+    <h4>Frequently Asked Questions</h4>
+
+    <select id="faq-select" onchange="showAnswer(this.value)">
+        <option value="">Select a question</option>
+        <option value="faq1">What rights do I have under Ethiopian law?</option>
+        <option value="faq2">How do I file a legal complaint?</option>
+        <option value="faq3">What is the process for marriage registration?</option>
+        <option value="faq4">Can I represent myself in court?</option>
+        <option value="faq5">What should I do if I’m arrested?</option>
+        <option value="faq6">How do I obtain a work permit in Ethiopia?</option>
+        <option value="faq7">What is the process for land ownership transfer?</option>
+        <option value="faq8">How do I handle disputes with my employer?</option>
+        <option value="faq9">What are the tax obligations for small businesses?</option>
+        <option value="faq10">What is the procedure for adopting a child?</option>
+    </select>
+    
+    <div id="faq1" class="faq-box" style="display: none;">
+        <div class="answer">
+            Under Ethiopian law, individuals are entitled to fundamental human rights such as the right to life, freedom of expression, and equal protection under the law. Ethiopian law also protects the rights of women, children, and persons with disabilities, as well as guarantees religious and cultural freedoms.
+        </div>
+    </div>
+
+    <div id="faq2" class="faq-box" style="display: none;">
+        <div class="answer">
+            To file a legal complaint, visit the nearest court or the office of the relevant government agency, depending on the issue. You may need to provide a formal written complaint, along with any supporting documents, evidence, or testimony. Legal advice can be sought from a lawyer to guide you through the process.
+        </div>
+    </div>
+
+    <div id="faq3" class="faq-box" style="display: none;">
+        <div class="answer">
+            Marriage registration in Ethiopia involves applying at the local civil registry office. Both parties must submit personal documents, such as identification and proof of residency. There may be a waiting period, and a marriage certificate is issued after the process is complete.
+        </div>
+    </div>
+
+    <div id="faq4" class="faq-box" style="display: none;">
+        <div class="answer">
+            Yes, you can represent yourself in court in Ethiopia, though it is advisable to seek legal representation, especially for complex cases. In criminal cases, the government may provide legal aid if you cannot afford a lawyer.
+        </div>
+    </div>
+
+    <div id="faq5" class="faq-box" style="display: none;">
+        <div class="answer">
+            If arrested, you have the right to remain silent and the right to legal counsel. You must be informed of the charges against you, and you should request to contact a lawyer or family member. It is essential to understand your rights and seek professional legal advice immediately.
+        </div>
+    </div>
+
+    <div id="faq6" class="faq-box" style="display: none;">
+        <div class="answer">
+            Obtaining a work permit in Ethiopia requires an application to the Ministry of Labor and Social Affairs. Provide the necessary documents, including a valid passport, employment contract, and the employer's business license. Certain categories may require additional approvals from relevant authorities. Ensure all documents are accurate and up-to-date. Processing times and fees may vary depending on the permit type.
+        </div>
+    </div>
+
+    <div id="faq7" class="faq-box" style="display: none;">
+        <div class="answer">
+            The process for transferring land ownership involves visiting the local land administration office. Required documents include the original ownership deed, identification, and proof of transaction. Both parties must appear in person to sign the transfer agreement. Ensure all taxes and fees are paid before finalizing the process.
+        </div>
+    </div>
+
+    <div id="faq8" class="faq-box" style="display: none;">
+        <div class="answer">
+            To handle disputes with your employer, start by reviewing your employment contract and Ethiopian labor law. Attempt to resolve issues through internal discussions or mediation. If unresolved, file a complaint with the labor office or seek legal assistance. Ensure you document all communications and incidents for reference.
+        </div>
+    </div>
+
+    <div id="faq9" class="faq-box" style="display: none;">
+        <div class="answer">
+            Small businesses in Ethiopia must register with the tax authority and obtain a Tax Identification Number (TIN). File annual tax returns and keep accurate financial records. Taxes may include income tax, VAT, and withholding tax, depending on business activity. Non-compliance can result in penalties or legal action.
+        </div>
+    </div>
+
+    <div id="faq10" class="faq-box" style="display: none;">
+        <div class="answer">
+            Adopting a child in Ethiopia involves working with an approved adoption agency. Submit an application along with personal and financial documents. The process includes home visits, interviews, and legal hearings to ensure eligibility. Obtain a court order to finalize the adoption, followed by registration with civil authorities.
+        </div>
+    </div>
+
+    <script>
+        function showAnswer(faqId) {
+            const faqs = document.querySelectorAll(".faq-box");
+            faqs.forEach(faq => faq.style.display = "none");
+            if (faqId) {
+                document.getElementById(faqId).style.display = "block";
+            }
+        }
+    </script>
+   <!-- Articles Section -->
+<!-- Articles Section -->
+<h4>Articles:</h4>
+<a href="https://brill.com/view/journals/icla/19/1/article-p160_160.xml?language=en" target="_blank">Punishing Core Crimes in Ethiopia: Analysis of the Domestic Practice</a>
+<a href="https://africlaw.com/2024/04/18/stepping-away-from-traditional-sentencing-exploring-alternative-punishment-methods-in-ethiopia-to-reduce-prison-overcrowding/" target="_blank">Exploring Alternative Punishment Methods in Ethiopia to Reduce Prison Overcrowding</a>
+<a href="https://www.scirp.org/journal/paperinformation?paperid=97764" target="_blank">Fighting against Impunity in Ethiopia: An Emphasis on Crime against Humanity</a>
+<a href="https://issafrica.org/iss-today/prosecuting-crimes-against-humanity-in-ethiopia-where-is-the-law" target="_blank">Prosecuting Crimes against Humanity in Ethiopia: Where is the Law?</a>
+
+
+<h4>Legal Documents and Templates:</h4>
+<a href="https://docs.google.com/document/d/11eWAmH1Aet_2LgQQPhOo8jYwlqfhjmFB/edit?usp=drive_link&ouid=103926091642412895483&rtpof=true&sd=true">Gurgurtaa Mana Kaartaa</a>
+<a href="https://docs.google.com/document/d/1Wgm6w9eZhmz6HdGE48A6abEnYTxiWo5Q/edit?usp=drive_link&ouid=103926091642412895483&rtpof=true&sd=true">Share Company Agreement</a>
+<a href="https://docs.google.com/document/d/1NnmTGIJWV-UVKoeJRncH0Y4hATIt8Qcn/edit?usp=drive_link&ouid=103926091642412895483&rtpof=true&sd=true">Construction agreement Form</a>
+<a href="https://docs.google.com/document/d/1ntUymFa2muUJl0vct1MEmEoFLxafOrFW/edit?usp=drive_link&ouid=103926091642412895483&rtpof=true&sd=true">Rental contract template</a>
+<a href="https://docs.google.com/document/d/1sXSy87mc7Cf6MbU-0o_4eMiccRz_K4nd/edit?usp=drive_link&ouid=103926091642412895483&rtpof=true&sd=true">Employment income tax form </a>
+
+<h4>Ethiopian Constitution Highlights:</h4>
+<p>Explore significant articles from the Ethiopian Constitution:</p>
+<ul>
+    <li>Article 13: Human and Democratic Rights</li>
+    <li>Article 39: Nations, Nationalities, and Peoples’ Rights</li>
+    <li>Article 41: Economic, Social, and Cultural Rights</li>
+    <li>Article 55: Federal Legislative Powers</li>
+</ul>
+<a href="https://www.constituteproject.org/constitution/Ethiopia_1994" target="_blank">Read the full Ethiopian Constitution</a>
+</div>
+
+     <!-- Payment Verification Section -->
+<div id="payment-verification" class="section">
+    <h3>Payment Verification</h3>
+    <p>Please complete the form below to verify your payment. Ensure all required fields are correctly filled out.</p>
+    
+    <form id="payment-verification-form">
+         
+        <label for="lawyer-name">Lawyer Name:</label>
+        <input type="text" id="lawyer-name" placeholder="Enter the lawyer's name" required>
+      
+        <label for="payment-amount">Payment Amount:</label>
+        <input type="number" id="payment-amount" placeholder="Enter the amount paid" min="1" required>
+        
+        
+        <label for="payment-date">Payment Date:</label>
+        <input type="date" id="payment-date" required>
+         
+        <label for="payment-document">Upload Supporting Document:</label>
+        <input type="file" id="payment-document" accept=".pdf, .docx, .jpg, .png" required>
+         
+        <label for="payment-comments">Additional Comments (Optional):</label>
+        <textarea id="payment-comments" placeholder="Provide any additional details about your payment..." rows="4"></textarea>
+     
+        <button type="submit">Submit for Verification</button>
+    </form>
+</div>
+
+
+
+        <!-- Booking Section -->
+        <div id="booking" class="section">
+            <h3>Book a Legal Consultation</h3>
+            <form class="booking-form">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required placeholder="Enter your name">
+        
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required placeholder="Enter your email">
+        
+                <label for="lawyer">Enter Lawyer's Name:</label>
+                <input type="text" id="lawyer" name="lawyer" required placeholder="Enter the lawyer's name">
+        
+                <label for="time">Choose a Time:</label>
+                <input type="datetime-local" id="time" name="time" required>
+        
+                <label for="query">Your Query:</label>
+                <textarea id="query" name="query" placeholder="Describe your legal query" rows="4"></textarea>
+        
+                <button type="submit">Book Now</button>
+            </form>
+            <div id="confirmation-message" style="display:none;">
+                <h4>Your booking is confirmed!</h4>
+                <p>We will send a confirmation email shortly. Thank you for choosing us!</p>
+            </div>
+        </div>
+        
+        <script>
+            const form = document.querySelector('.booking-form');
+            const confirmationMessage = document.getElementById('confirmation-message');
+        
+            form.addEventListener('submit', (event) => {
+                event.preventDefault(); // Prevent form submission for demonstration
+                confirmationMessage.style.display = 'block'; // Show confirmation message
+                form.reset(); // Reset form fields
+            });
+        </script>
+        
+
+         
+       <!-- Video Consultation Section -->
+<div id="video-consultation" class="section">
+    <h3>Video Consultation</h3>
+    <p>
+        Connect with your lawyer seamlessly using our secure video conferencing feature. 
+        Video calls are encrypted to ensure confidentiality, and sessions can be recorded 
+        upon mutual consent for future reference.
+    </p>
+    <ul>
+        <li>End-to-end encrypted calls</li>
+        <li>Consent-based recording options</li>
+        <li>Schedule consultations directly from your dashboard</li>
+    </ul>
+    <button class="video-btn">Start Video Call</button>
+    <button class="schedule-btn">Schedule a Consultation</button>
+</div>
+
+         
+       <!-- Communication Section -->
+<div id="communication" class="section">
+    <h3>Secure Messaging</h3>
+    <p>
+        Stay connected with your lawyer through our private messaging system. 
+        Share documents, discuss cases, and receive updates securely in one place.
+    </p>
+    <ul>
+        <li>Encrypted messaging for privacy</li>
+        <li>Attach and send legal documents effortlessly</li>
+        <li>Real-time notifications for new messages</li>
+    </ul>
+    <textarea class="message-form" placeholder="Write your message..."></textarea>
+    <button type="submit">Send Message</button>
+    <button class="attach-btn">Attach Documents</button>
+</div>
+
+
+        <!-- Matchmaking Section -->
+        <div id="search-lawyer" class="section">
+            <h3>Find a Lawyer</h3>
+            <form>
+                <label for="location">Location:</label>
+                <select id="location">
+                    <option value="addis-ababa">Addis Ababa</option>
+                    <option value="adama">Adama</option>
+                </select>
+        
+                <label for="law-type">Law Type:</label>
+                <select id="law-type">
+                    <option value="criminal">Criminal Law</option>
+                    <option value="family">Family Law</option>
+                    <option value="business">Business Law</option>
+                    <option value="immigration">Immigration Law</option>
+                </select>
+        
+                <label for="budget">Budget:</label>
+                <input type="number" id="budget" placeholder="Enter budget range">
+        
+                <button type="submit">search</button>
+            </form>
+        </div>
+        
+         <!-- Review Lawyer Section -->
+ 
+<div id="review-lawyer" class="section">
+    <h3>Review Your Lawyer</h3>
+    <p>
+        Help improve our service by providing feedback on your experience with your lawyer. 
+        Your reviews are invaluable for maintaining service quality and transparency.
+    </p>
+    <ul>
+        <li>Rate your lawyer on a scale of 1 to 5</li>
+        <li>Leave detailed feedback to help others</li>
+        <li>View your past reviews anytime</li>
+    </ul>
+    <form class="review-form">
+        <label for="lawyer-name">Lawyer's Name:</label>
+        <select id="lawyer-name" name="lawyer-name">
+            <option value="" disabled selected>Select your lawyer</option>
+            <option value="1">John Doe</option>
+            <option value="2">Jane Smith</option>
+            <option value="3">Samuel Brown</option>
+            <!-- Dynamically populate lawyers based on the client-lawyer match -->
+        </select>
+
+        <label for="rating">Rating:</label>
+        <select id="rating" name="rating">
+            <option value="1">1 - Poor</option>
+            <option value="2">2 - Fair</option>
+            <option value="3">3 - Good</option>
+            <option value="4">4 - Very Good</option>
+            <option value="5">5 - Excellent</option>
+        </select>
+
+        <label for="feedback">Feedback:</label>
+        <textarea id="feedback" name="feedback" placeholder="Write your feedback here..."></textarea>
+
+        <button type="submit">Submit Review</button>
+    </form>
+</div>
+
+        <!-- Footer Section -->
+        <footer>
+            <p>&copy; 2024 LawMate. All rights reserved.</p>
+        </footer>
+    </div>
+   
+</body>
+</html>
