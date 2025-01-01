@@ -27,7 +27,7 @@ Provide tools for case management, document organization, and consultation sched
 Clients: Secure messaging, legal resources, and consultation booking.
 Lawyers: Case management tools, document organization, and collaboration features.
 
-Key Features:
+Key Features are follows:
 
 Video conferencing system
 
