@@ -54,7 +54,7 @@ header nav ul li a:hover {
 .hero {
             position: relative;
             height: 100vh;
-            background: url('../img/home_background.jpg') no-repeat center center/cover;
+            background: url('../assets/img/home_background.jpg') no-repeat center center/cover;
             display: flex;
             flex-direction: column;
             justify-content: center;
