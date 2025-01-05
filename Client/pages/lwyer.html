@@ -1,180 +1,279 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
     <title>Lawyer Dashboard</title>
-    <link rel="stylesheet" href="../css/User.css">
+    <link rel="stylesheet" href="../css/User.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <input type="checkbox" id="check" />
+    <label for="check">
+      <i class="fas fa-bars" id="btn"></i>
+      <i class="fas fa-times" id="cancel"></i>
+    </label>
 
-    <!-- FullCalendar CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/fullcalendar@3.2.0/dist/fullcalendar.min.css" rel="stylesheet" />
-</head>
-<body>
-
-    <!-- Header Section -->
-    <header>
-        <h1>Lawyer Dashboard</h1>
-    </header>
-
-    <!-- Sidebar Section with Functionalities -->
     <div class="sidebar">
+      <header>
         <div class="logo">
-            <img src="../assets/img/photo_2024-12-27_15-10-59.jpg " style="border-radius: 50%; width: 150px; height: 150px;" alt=" Logo Here">
+          <img
+            src="../assets/img/photo_2024-12-27_15-10-59.jpg "
+            style="border-radius: 50%; width: 150px; height: 150px"
+            alt=" Logo Here"
+          />
         </div>
-        <a href="#profile">Profile</a>
-        <a href="#case-management">Case Management</a>
-        <a href="#client-communication">Client Communication</a>
-        <a href="#schedule">Schedule</a>
-        <a href="#video-consultation">Video Consultation</a>
-        <a href="logout.html">Logout</a>
+      </header>
+      <ul>
+        <li><a href="#profile">Profile</a>></li>
+        <li><a href="#case-management">Case Management</a></li>
+        <li><a href="#client-communication">Client Communication</a></li>
+        <li><a href="#schedule">Schedule</a></li>
+        <li><a href="#communication">Communication</a></li>
+        <li><a href="#video-consultation">Video Consultation</a></li>
+        <li><a href="logout.html">Logout</a></li>
+      </ul>
     </div>
-
-    <!-- Main Content Section -->
-    <div class="main-content">
-
+    <section>
+      <header>
+        <h1>Lawyer Dashboard</h1>
+      </header>
+      <!-- Main Content Section -->
+      <div class="main-content">
         <!-- Profile Section -->
         <div id="profile" class="section">
-            <h3>Profile</h3>
-            <div>
+          <h3>Profile</h3>
+          <div>
             <p>Name: Daniel geremew</p>
             <p>Email:danielgeremew@gmail.com</p>
             <p>Phone: 987-654-3210</p>
             <p>Specialization: Criminal Law</p>
             <p>Bank Account: 1000234567890</p>
-           </div>
-           <div> 
-            <img src="img/man-6857242_1280.jpg" alt="Profile Picture" style="width: 200px; height: 200px; border-radius: 50%;">
-           </div>
+          </div>
+          <div>
+            <img
+              src="img/man-6857242_1280.jpg"
+              alt="Profile Picture"
+              style="width: 200px; height: 200px; border-radius: 50%"
+            />
+          </div>
         </div>
 
         <!-- Edit Profile Form -->
         <div id="edit-profile-section" class="section">
-            <h3>Edit Profile</h3>
-            <form class="edit-profile-form">
-                <label for="name">Name:</label>
-                <input type="text" id="name" value="Jane Smith">
+          <h3>Edit Profile</h3>
+          <form class="edit-profile-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" value="Jane Smith" />
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" value="janesmith@example.com">
+            <label for="email">Email:</label>
+            <input type="email" id="email" value="janesmith@example.com" />
 
-                <label for="phone">Phone:</label>
-                <input type="tel" id="phone" value="987-654-3210">
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" value="987-654-3210" />
 
-                <label for="specialization">Specialization:</label>
-                <input type="text" id="specialization" placeholder="Enter your field of law">
+            <label for="specialization">Specialization:</label>
+            <input
+              type="text"
+              id="specialization"
+              placeholder="Enter your field of law"
+            />
 
-                <label for="bank-account">Bank Account Number:</label>
-                <input type="text" id="bank-account" placeholder="Enter your bank account">
+            <label for="bank-account">Bank Account Number:</label>
+            <input
+              type="text"
+              id="bank-account"
+              placeholder="Enter your bank account"
+            />
 
-                <label for="profile-pic">Profile Picture:</label>
-                <input type="file" id="profile-pic" accept="image/*">
+            <label for="profile-pic">Profile Picture:</label>
+            <input type="file" id="profile-pic" accept="image/*" />
 
-                <button type="submit">Save Changes</button>
-            </form>
+            <button type="submit">Save Changes</button>
+          </form>
         </div>
 
         <!-- Case Management Section -->
         <div id="case-management" class="section">
-            <h3>Case Management</h3>
-            <p>Track and manage your cases efficiently.</p>
-        
-            <!-- Search Bar -->
-            <div class="search-case">
-                <input type="text" id="search-input" placeholder="Search for a case by name or status..." />
-                <button id="search-button">Search</button>
-            </div>
-        
-            <!-- Case List -->
-            <ul class="case-list" id="case-list">
-                <li>
-                    <a href="#">Case #1: John Doe vs. XYZ Corp</a>
-                    <p>Status: In Progress</p>
-                    <select class="update-status" name="status-1">
-                        <option value="in-progress" selected>In Progress</option>
-                        <option value="awaiting">Awaiting Court Date</option>
-                        <option value="closed">Closed</option>
-                    </select>
-                    <button class="btn-update-status" data-case-id="1">Update Status</button>
-                </li>
-                <li>
-                    <a href="#">Case #2: Mary Johnson vs. ABC Inc</a>
-                    <p>Status: Awaiting Court Date</p>
-                    <select class="update-status" name="status-2">
-                        <option value="in-progress">In Progress</option>
-                        <option value="awaiting" selected>Awaiting Court Date</option>
-                        <option value="closed">Closed</option>
-                    </select>
-                    <button class="btn-update-status" data-case-id="2">Update Status</button>
-                </li>
-                <li>
-                    <a href="#">Case #3: Michael Brown vs. DEF Ltd</a>
-                    <p>Status: Closed</p>
-                    <select class="update-status" name="status-3">
-                        <option value="in-progress">In Progress</option>
-                        <option value="awaiting">Awaiting Court Date</option>
-                        <option value="closed" selected>Closed</option>
-                    </select>
-                    <button class="btn-update-status" data-case-id="3">Update Status</button>
-                </li>
-            </ul>
-        
-            <!-- Buttons for case actions -->
-            <button id="btn-create-case">Create New Case</button>
+          <h3>Case Management</h3>
+          <p>Track and manage your cases efficiently.</p>
+
+          <!-- Search Bar -->
+          <div class="search-case">
+            <input
+              type="text"
+              id="search-input"
+              placeholder="Search for a case by name or status..."
+            />
+            <button id="search-button">Search</button>
+          </div>
+
+          <!-- Case List -->
+          <ul class="case-list" id="case-list">
+            <li>
+              <a href="#">Case #1: John Doe vs. XYZ Corp</a>
+              <p>Status: In Progress</p>
+              <select class="update-status" name="status-1">
+                <option value="in-progress" selected>In Progress</option>
+                <option value="awaiting">Awaiting Court Date</option>
+                <option value="closed">Closed</option>
+              </select>
+              <button class="btn-update-status" data-case-id="1">
+                Update Status
+              </button>
+            </li>
+            <li>
+              <a href="#">Case #2: Mary Johnson vs. ABC Inc</a>
+              <p>Status: Awaiting Court Date</p>
+              <select class="update-status" name="status-2">
+                <option value="in-progress">In Progress</option>
+                <option value="awaiting" selected>Awaiting Court Date</option>
+                <option value="closed">Closed</option>
+              </select>
+              <button class="btn-update-status" data-case-id="2">
+                Update Status
+              </button>
+            </li>
+            <li>
+              <a href="#">Case #3: Michael Brown vs. DEF Ltd</a>
+              <p>Status: Closed</p>
+              <select class="update-status" name="status-3">
+                <option value="in-progress">In Progress</option>
+                <option value="awaiting">Awaiting Court Date</option>
+                <option value="closed" selected>Closed</option>
+              </select>
+              <button class="btn-update-status" data-case-id="3">
+                Update Status
+              </button>
+            </li>
+          </ul>
+
+          <!-- Buttons for case actions -->
+          <button id="btn-create-case">Create New Case</button>
         </div>
-        
-        
 
         <!-- Client Communication Section -->
-<div id="client-communication" class="section">
-    <h3>Client Communication</h3>
-    <p>Manage and respond to client messages efficiently.</p>
+        <div id="client-communication" class="section">
+          <h3>Client Communication</h3>
+          <p>Manage and respond to client messages efficiently.</p>
 
-    <!-- Message List -->
-    <ul class="message-list">
-        <li>
-            <a href="#">Message from Client: John Doe</a>
-            <p>Subject: Inquiry about Case #1</p>
-            <textarea placeholder="Write your response..."></textarea>
-            <button class="btn-send-response" data-client-id="1">Send Response</button>
-            <button class="btn-resolve-message" data-message-id="1">Mark as Resolved</button>
-        </li>
-        <li>
-            <a href="#">Message from Client: Mary Johnson</a>
-            <p>Subject: Request for Legal Documents</p>
-            <textarea placeholder="Write your response..."></textarea>
-            <button class="btn-send-response" data-client-id="2">Send Response</button>
-            <button class="btn-resolve-message" data-message-id="2">Mark as Resolved</button>
-        </li>
-        <li>
-            <a href="#">Message from Client: Michael Brown</a>
-            <p>Subject: Update on Case #3</p>
-            <textarea placeholder="Write your response..."></textarea>
-            <button class="btn-send-response" data-client-id="3">Send Response</button>
-            <button class="btn-resolve-message" data-message-id="3">Mark as Resolved</button>
-        </li>
-    </ul>
-</div>
-
+          <!-- Message List -->
+          <ul class="message-list">
+            <li>
+              <a href="#">Message from Client: John Doe</a>
+              <p>Subject: Inquiry about Case #1</p>
+              <textarea placeholder="Write your response..."></textarea>
+              <button class="btn-send-response" data-client-id="1">
+                Send Response
+              </button>
+              <button class="btn-resolve-message" data-message-id="1">
+                Mark as Resolved
+              </button>
+            </li>
+            <li>
+              <a href="#">Message from Client: Mary Johnson</a>
+              <p>Subject: Request for Legal Documents</p>
+              <textarea placeholder="Write your response..."></textarea>
+              <button class="btn-send-response" data-client-id="2">
+                Send Response
+              </button>
+              <button class="btn-resolve-message" data-message-id="2">
+                Mark as Resolved
+              </button>
+            </li>
+            <li>
+              <a href="#">Message from Client: Michael Brown</a>
+              <p>Subject: Update on Case #3</p>
+              <textarea placeholder="Write your response..."></textarea>
+              <button class="btn-send-response" data-client-id="3">
+                Send Response
+              </button>
+              <button class="btn-resolve-message" data-message-id="3">
+                Mark as Resolved
+              </button>
+            </li>
+          </ul>
+        </div>
 
         <!-- Schedule Section -->
         <div id="schedule" class="section">
-            <h3>Schedule</h3>
-            <p>Manage your appointments and availability using the calendar below.</p>
-            <div id="calendar"></div>
+          <h3>Schedule</h3>
+          <p>
+            Manage your appointments and availability using the calendar below.
+          </p>
+          <div id="calendar"></div>
         </div>
         <!-- Video Consultation Section -->
         <div id="video-consultation" class="section">
-            <h3>Video Consultation</h3>
-            <p>Schedule and conduct video consultations with clients.</p>
-            <button>Start Video Call</button>
+          <h3>Video Consultation</h3>
+          <p>Schedule and conduct video consultations with clients.</p>
+          <button>Start Video Call</button>
         </div>
 
         <!-- Footer Section -->
         <footer>
-            <p>&copy; 2024 LawMate. All rights reserved.</p>
+          <p>&copy; 2024 LawMate. All rights reserved.</p>
         </footer>
+      </div>
+      <script src="../js/script.js"></script>
+    </section>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Profile section elements
+        const profileName = document.querySelector("#profile p:nth-child(1)");
+        const profileEmail = document.querySelector("#profile p:nth-child(2)");
+        const profilePhone = document.querySelector("#profile p:nth-child(3)");
+        const profileSpecialization = document.querySelector(
+          "#profile p:nth-child(4)"
+        );
+        const profileBankAccount = document.querySelector(
+          "#profile p:nth-child(5)"
+        );
+        const profileImage = document.querySelector("#profile img");
 
-    </div>
+        // Form input elements
+        const nameInput = document.querySelector("#name");
+        const emailInput = document.querySelector("#email");
+        const phoneInput = document.querySelector("#phone");
+        const specializationInput = document.querySelector("#specialization");
+        const bankAccountInput = document.querySelector("#bank-account");
+        const profilePicInput = document.querySelector("#profile-pic");
 
-</body>
+        const saveButton = document.querySelector(".edit-profile-form button");
+
+        // Handle form submission
+        saveButton.addEventListener("click", function (e) {
+          e.preventDefault(); // Prevent page reload
+
+          // Update profile display with form values
+          profileName.textContent = `Name: ${nameInput.value}`;
+          profileEmail.textContent = `Email: ${emailInput.value}`;
+          profilePhone.textContent = `Phone: ${phoneInput.value}`;
+          profileSpecialization.textContent = `Specialization: ${specializationInput.value}`;
+          profileBankAccount.textContent = `Bank Account: ${bankAccountInput.value}`;
+
+          // Update profile picture if a new image is selected
+          const file = profilePicInput.files[0];
+          if (file) {
+            const reader = new FileReader();
+            reader.onload = function (event) {
+              profileImage.src = event.target.result;
+            };
+            reader.readAsDataURL(file);
+          }
+
+          // Optionally clear the form fields
+          nameInput.value = "";
+          emailInput.value = "";
+          phoneInput.value = "";
+          specializationInput.value = "";
+          bankAccountInput.value = "";
+          profilePicInput.value = "";
+        });
+      });
+    </script>
+  </body>
 </html>
