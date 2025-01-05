@@ -123,9 +123,8 @@
             <form id="signupForm">
                 <h2>Sign Up</h2>
  
+                <input type="text" id="name" class="input-field" placeholder="Enter your Full Name" required>
                 <input type="email" id="email" class="input-field" placeholder="Enter your Email" required>
- 
-                <input type="text" id="phone" class="input-field" placeholder="Enter your Phone Number" required>
 
          
                 <input type="password" id="password" class="input-field" placeholder="Enter your Password" required minlength="8">
@@ -157,8 +156,8 @@
                 <!-- Conditional Lawyer Info Form -->
                 <div id="lawyerCredentials" style="display: none;">
                     <h3>Enter Your Lawyer Credentials</h3>
-                    <input type="text" id="lawyerName" class="input-field" placeholder="Lawyer's Full Name" required>
-                    <input type="email" id="lawyerEmail" class="input-field" placeholder="Lawyer's Email" required>
+                    <input type="email" id="lawyerEmail" class="input-field" placeholder="Lawyer's Specialization" required>
+                    <input type="text" id="lawyerPhone" class="input-field" placeholder="Lawyer's Phone Number" required>
 
                     <!-- PDF Upload Section -->
                     <div class="file-upload">
