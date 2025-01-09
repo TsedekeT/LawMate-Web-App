@@ -5,20 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Client Dashboard</title>
     <link rel="stylesheet" href="../css/User.css">
-    
-     
+  
 </head>
 <body>
 
     <!-- Header Section -->
     <header>
+        <button class="menu-toggle">☰</button>
         <h1>Client Dashboard</h1>
     </header>
 
     <!-- Sidebar Section with Functionalities -->
     <div class="sidebar">
         <div class="logo">
-            <img src="../assets/img/photo_2024-12-27_15-10-59.jpg " style="border-radius: 50%; width: 150px; height: 150px;" alt=" Logo Here">
+            <img src="../assets/img/Logo.jpg" style="border-radius: 50%; width: 150px; height: 150px;" alt=" Logo Here">
         </div>
         <a href="#profile">Profile</a>
         <a href="#video-consultation">Video Consultation</a>
@@ -29,7 +29,7 @@
         <a href="#search-lawyer">Matchmaking</a>
         <a href="#edit-profile-section">Update Profile</a>
         <a href="#review-lawyer">Review Lawyer</a>
-        <a href="logout.html">Logout</a>
+        <a href="home.html">Logout</a>
     </div>
 
     <!-- Main Content Section -->
@@ -43,7 +43,7 @@
             <p>Phone: 123-456-7890</p>
            </div>
            <div> 
-            <img src="img/woman-6771278_1280.jpg" alt="Profile Picture" style="width: 200px; height:200px; border-radius: 50%;">
+            <img src="../assets/img/C1.jpg" alt="Profile Picture" style="width: 200px; height:200px; border-radius: 50%;">
            </div>
         </div>
 
@@ -198,21 +198,23 @@
      <!-- Payment Verification Section -->
 <div id="payment-verification" class="section">
     <h3>Payment Verification</h3>
-    <p>Please complete the form below to verify your payment. Ensure all required fields are correctly filled out.</p>
+    <p>Please complete the form below to verify your payment. 
+        Ensure all those with the * are correctly filled out.</p>
     
     <form id="payment-verification-form">
          
-        <label for="lawyer-name">Lawyer Name:</label>
+        <label for="lawyer-name">Lawyer Name * :</label>
         <input type="text" id="lawyer-name" placeholder="Enter the lawyer's name" required>
       
-        <label for="payment-amount">Payment Amount:</label>
+        <label for="payment-amount">Payment Amount * :</label>
         <input type="number" id="payment-amount" placeholder="Enter the amount paid" min="1" required>
         
         
-        <label for="payment-date">Payment Date:</label>
+        <label for="payment-date">Payment Date * :</label>
         <input type="date" id="payment-date" required>
          
-        <label for="payment-document">Upload Supporting Document:</label>
+        <label for="payment-document">Upload Supporting Document * :(Either a screenshot of the payment or
+            PDF of the Payment Receipt)</label>
         <input type="file" id="payment-document" accept=".pdf, .docx, .jpg, .png" required>
          
         <label for="payment-comments">Additional Comments (Optional):</label>
@@ -369,6 +371,7 @@
             <p>&copy; 2024 LawMate. All rights reserved.</p>
         </footer>
     </div>
-   
+    
+    <script src="../js/ClientProfile.js"></script>   
 </body>
 </html>
